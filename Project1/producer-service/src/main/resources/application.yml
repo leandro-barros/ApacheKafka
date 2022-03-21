@@ -7,3 +7,6 @@ spring:
 
 topic:
   topic-producer: topic-producer
+
+server:
+  port: 8081
