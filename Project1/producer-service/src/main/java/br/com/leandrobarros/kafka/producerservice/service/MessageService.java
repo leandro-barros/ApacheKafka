@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class MessageService {
 
-    @Value("${topic.producer")
+    @Value("${topic.topic-producer}")
     private String topicProducer;
 
     @Autowired
