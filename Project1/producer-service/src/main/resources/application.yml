@@ -1,3 +1,6 @@
+server:
+  port: 8081
+
 spring:
   kafka:
     producer:
@@ -6,7 +9,4 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 topic:
-  topic-producer: topic-producer
-
-server:
-  port: 8081
+  topic-practice: topic-practice
