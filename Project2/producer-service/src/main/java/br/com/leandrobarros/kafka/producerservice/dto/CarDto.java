@@ -1,9 +1,9 @@
 package br.com.leandrobarros.kafka.producerservice.dto;
 
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Setter;
 
-@Getter
+@Setter
 @Builder
 public class CarDto {
 
