@@ -14,6 +14,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -52,5 +53,20 @@ public class KafkaProducerConfig {
     @Bean
     public KafkaTemplate<String, CarDto> kafkaTemplate() {
         return new KafkaTemplate<>(carProducerFactory());
+    }
+
+    @Bean
+    public ProducerFactory<String, Object> jsonObjectProducerFactory() {
+        var configProps = new HashMap<String, Object>();
+        configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
+        configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
+
+        return new DefaultKafkaProducerFactory<>(configProps, new StringSerializer(), new JsonSerializer<>());
+    }
+
+    @Bean
+    public KafkaTemplate<String, Serializable> jsonObjectkafkaTemplate() {
+        return new KafkaTemplate(jsonObjectProducerFactory());
     }
 }
