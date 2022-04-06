@@ -36,7 +36,7 @@ public class KafkaProducerConfig {
     public KafkaAdmin.NewTopics createTopic() {
         return new KafkaAdmin.NewTopics(
                 TopicBuilder.name(topicName).partitions(3).replicas(1).build(),
-                TopicBuilder.name("topic2-cars").partitions(3).replicas(1).build()
+                TopicBuilder.name("topic-person").partitions(3).replicas(1).build()
         );
     }
 
