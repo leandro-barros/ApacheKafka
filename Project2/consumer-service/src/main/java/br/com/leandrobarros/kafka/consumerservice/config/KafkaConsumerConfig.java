@@ -1,6 +1,7 @@
 package br.com.leandrobarros.kafka.consumerservice.config;
 
 import br.com.leandrobarros.kafka.consumerservice.dto.CarDto;
+import br.com.leandrobarros.kafka.consumerservice.dto.PersonDto;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -40,6 +41,30 @@ public class KafkaConsumerConfig {
     public ConcurrentKafkaListenerContainerFactory<String, CarDto> carKafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, CarDto> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(carConsumerFactory());
+        return factory;
+    }
+
+    // Config Person
+
+    @Bean
+    public ConsumerFactory<String, PersonDto> personConsumerFactory() {
+        var props = new HashMap<String, Object>();
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, booststrapAddress);
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonSerializer.class);
+
+        var jsonDeserializer = new JsonDeserializer<>(PersonDto.class)
+                .trustedPackages("*")
+                .forKeys();
+
+        return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(),
+                jsonDeserializer);
+    }
+
+    @Bean
+    public ConcurrentKafkaListenerContainerFactory<String, PersonDto> personKafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, PersonDto> factory = new ConcurrentKafkaListenerContainerFactory<>();
+        factory.setConsumerFactory(personConsumerFactory());
         return factory;
     }
 }
