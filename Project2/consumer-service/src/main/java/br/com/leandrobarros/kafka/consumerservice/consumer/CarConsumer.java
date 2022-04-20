@@ -25,7 +25,7 @@ public class CarConsumer {
         log.info("Received message: " + consumerRecord.value());
     }
 
-    @KafkaListener(topics = "${topic.name}", groupId = "${spring.kafka.group-id}", containerFactory = "carKafkaListenerContainerFactory")
+    @KafkaListener(topics = "${topic.name}", groupId = "${spring.kafka.group-id}", containerFactory = "carKafkaListenerContainerFactory", concurrency = "2")
     public void listenWithHeaders(ConsumerRecord<String, CarDto> consumerRecord,
                                   @Header(KafkaHeaders.RECEIVED_TOPIC) String topic,
                                   @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) {
