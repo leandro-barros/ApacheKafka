@@ -22,4 +22,8 @@ public class PersonProducer {
         );
     }
 
+    public void sendMessageMyTopic(PersonDto personDto) {
+        jsonObjectkafkaTemplate.send("my-topic", personDto);
+    }
+
 }

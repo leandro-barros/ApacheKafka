@@ -22,6 +22,7 @@ public class PersonController {
     public ResponseEntity<PersonDto> sendPerson(@RequestBody PersonDto personDto) {
         personDto.setId(UUID.randomUUID().toString());
         personProducer.sendMessage(personDto);
+        personProducer.sendMessageMyTopic(personDto);
         return ResponseEntity.ok().body(personDto);
     }
 }
