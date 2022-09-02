@@ -29,3 +29,7 @@
  <a href="#-autor">Autor</a> • 
  <a href="#-licença">Licença</a>
 </p>
+
+## 💻 Sobre o projeto
+
+Repositório criado para praticar conhecimentos adquiridos sobre Apache Kafka. Aqui abordamos questões como produtores, consumidores, tópicos, partições, filas. E lógico comunicação assícrono em microsserviços.
