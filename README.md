@@ -40,6 +40,12 @@ Este repositório possui APIs RESTful desenvolvidas com Spring Boot, possuindo e
 
 ### Pré-requisitos
 
+Para executar os projetos é necessário possuir instalado na máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Java 11](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc), [Docker](https://docs.docker.com/desktop/install/windows-install/) e [Postman](https://www.postman.com/). 
+Além disto é bom ter um editor para trabalhar com o código como [Intellij](https://www.jetbrains.com/pt-br/idea/).
+
+O Postman é utilizado para executar as requisições. Já o Docker é para criar contâiner com servidor ApacheKafka.
+
 ## 🛠 Tecnologias
 
 ## 👨‍💻 Autor
