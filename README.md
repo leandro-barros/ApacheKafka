@@ -36,6 +36,8 @@ Repositório criado para praticar conhecimentos adquiridos sobre Apache Kafka. A
 
 ## 🚀 Executar o projeto
 
+Este repositório possui APIs RESTful desenvolvidas com Spring Boot, possuindo endpoints expostos para efetuar requisições.
+
 ### Pré-requisitos
 
 ## 🛠 Tecnologias
