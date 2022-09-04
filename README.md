@@ -46,6 +46,17 @@ Além disto é bom ter um editor para trabalhar com o código como [Intellij](ht
 
 O Postman é utilizado para executar as requisições. Já o Docker é para criar contâiner com servidor ApacheKafka.
 
+#### 🧭 Rodando projetos do repositório
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/leandro-barros/ApacheKafka.git>
+
+# Execute o contâiner Docker com Docker Compose
+$ docker-compose up
+
+```
+
 ## 🛠 Tecnologias
 
 ## 👨‍💻 Autor
