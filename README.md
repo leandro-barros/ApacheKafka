@@ -55,6 +55,9 @@ $ git clone <https://github.com/leandro-barros/ApacheKafka.git>
 # Execute o contâiner Docker com Docker Compose
 $ docker-compose up
 
+# Na classe principal de cada projeto execute-o.
+
+# O servidor inciará na porta indicada no arquivo (application.properties) de cada projeto
 ```
 
 ## 🛠 Tecnologias
