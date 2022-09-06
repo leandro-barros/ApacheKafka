@@ -87,3 +87,5 @@ As seguintes tecnologias foram utilizadas na construção dos projetos:
 [![Gmail Badge](https://img.shields.io/badge/-leandroedbarros@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:leandroedbarros@gmail.com)](leandroedbarros@gmail.com)
 
 ## 📝 Licença
+
+Projeto esta sobe a licença [MIT](./LICENSE).
