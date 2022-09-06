@@ -89,3 +89,5 @@ As seguintes tecnologias foram utilizadas na construção dos projetos:
 ## 📝 Licença
 
 Projeto esta sobe a licença [MIT](./LICENSE).
+
+By Leandro Barros ❤️  [Entre em contato!](https://www.linkedin.com/in/leandroebarros/)
