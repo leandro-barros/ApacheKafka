@@ -62,6 +62,19 @@ $ docker-compose up
 
 ## 🛠 Tecnologias
 
+As seguintes tecnologias foram utilizadas na construção dos projetos:
+
+- [Java 11](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc)
+- [Apache Kafka](https://kafka.apache.org/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring MVC](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html)
+- [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+- [Spring for Apache Kafka](https://docs.spring.io/spring-kafka/reference/html/)
+- [MySQL](https://www.mysql.com/downloads/)
+- [Maven](https://maven.apache.org/)
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
 ## 👨‍💻 Autor
 
 ## 📝 Licença
